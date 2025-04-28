@@ -1,4 +1,3 @@
-# Python project template
+# bookbot
 
-Template repository for Python projects that uses Poetry and pre-commit for
-dependency management and CI. Testing is done via `pytest`.
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
