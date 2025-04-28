@@ -1,10 +1,12 @@
-from stats import get_num_words, get_letter_count, sort_letter_count
 import sys
+
+from stats import get_letter_count, get_num_words, sort_letter_count
+
 
 def main() -> None:
     if len(sys.argv) != 2:
-        sys.exit(1, "Usage: python3 main.py <path_to_book>")
-    with open(sys.argv[1]) as f:
+        sys.exit("Usage: python3 main.py <path_to_book>")
+    with open(sys.argv[1], encoding="utf-8") as f:
         file_contents = f.read()
         num_words = get_num_words(file_contents)
         letter_count = get_letter_count(file_contents)
@@ -14,6 +16,6 @@ def main() -> None:
         if count["char"].isalpha():
             print(f"{count['char']}: {count['num']}")
 
-    
+
 if __name__ == "__main__":
     main()
