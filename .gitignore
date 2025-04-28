@@ -1,1 +1,3 @@
 .coverage
+/books
+__pycache__/
