@@ -13,6 +13,6 @@ def get_letter_count(book: str) -> dict[str, int]:
     return letter_dict
 
 
-def sort_letter_count(counts: dict) -> list[dict[str, int]]:
-    word_counts = [{"char": char, "num": num} for char, num in counts.items()]
+def sort_letter_count(counts: dict[str, int]) -> list[dict[str, str | int]]:
+    word_counts: list[dict[str, int | str]] = [{"char": char, "num": num} for char, num in counts.items()]
     return sorted(word_counts, key=lambda k: k["num"], reverse=True)
