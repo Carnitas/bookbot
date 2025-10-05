@@ -13,7 +13,7 @@ def main() -> None:
         sorted_letter_count = sort_letter_count(letter_count)
     print(f"Found {num_words} total words")
     for count in sorted_letter_count:
-        if count["char"].isalpha():
+        if count["char"]:
             print(f"{count['char']}: {count['num']}")
 
 
